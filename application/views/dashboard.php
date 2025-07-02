@@ -1,10 +1,29 @@
-<h2>Halo, <?= $username ?></h2>
-<p>Login sebagai: <?= $role ?></p>
+<?php
+  $this->load->view('template/header', [
+    'title' => 'Dashboard',
+    'username' => $this->session->userdata('username'),
+    'role' => $this->session->userdata('role')
+  ]);
 
-<?php if ($role == 'admin'): ?>
-  <p>Anda adalah Admin</p>
-<?php elseif ($role == 'petugas'): ?>
-  <p>Anda adalah Petugas</p>
-<?php endif; ?>
+  $this->load->view('template/sidebar');
+?>
 
-<a href="<?= site_url('auth/logout') ?>">Logout</a>
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Dashboard</h1>
+  </div>
+
+  <section class="section dashboard">
+    <div class="row">
+      <div class="col-12">
+        <div class="card p-4">
+          <h5>Selamat Datang <?= $username ?>!</h5>
+          <p>Login sebagai: <?= $role ?></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<?php $this->load->view('template/footer'); ?>
+
