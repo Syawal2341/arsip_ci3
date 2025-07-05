@@ -72,7 +72,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link <?= (strpos($current, 'boxarsip') !== false) ? '' : 'collapsed' ?>" href="<?= site_url('boxarsip') ?>">
+      <a class="nav-link <?= (strpos($current, 'boxarsip') !== false) ? '' : 'collapsed' ?>" href="<?= site_url('box_arsip') ?>">
         <i class="bi bi-folder"></i>
         <span>Box Arsip</span>
       </a>
